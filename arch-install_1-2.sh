@@ -10,7 +10,7 @@ systemctl enable sshd.service
 installVideoDrivers
 installDisplayManager kde
 installDesktopEnv kde
-installGTKThemes
+# installGTKThemes
 installOtherApps
 
 configureXorg
