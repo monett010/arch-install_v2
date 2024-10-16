@@ -42,8 +42,9 @@ esac
 # installDesktopEnv kde
 # installGTKThemes
 
-echo "Installing other apps..."
-installOtherApps
+# echo "Installing other apps..."
+read -p "Are there other apps you'd like to install?" other_apps
+installOtherApps other_apps
 
 echo "Configuring Xorg..."
 configureXorg
