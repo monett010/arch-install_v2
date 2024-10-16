@@ -4,7 +4,7 @@ source desktop_env.sh
 
 # installing some important programs first...
 echo "Installing some important programs first..."
-pacman -S openssh tmux
+pacman -S git openssh tmux
 systemctl enable sshd.service
 
 echo "Installing video drivers..."
