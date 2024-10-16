@@ -5,7 +5,7 @@
 
 function installVideoDrivers(){
 	echo 'Setting up graphics drivers and gui...'
-	pacman -Sp intel-media-driver mesa xf86-video-amdgpu xf86-video-vmware libva-intel-driver vulkan-intel xf86-video-ati xorg-server libva-mesa-driver vulkan-radeon xorg-xinit
+	pacman -S intel-media-driver mesa xf86-video-amdgpu xf86-video-vmware libva-intel-driver vulkan-intel xf86-video-ati xorg-server libva-mesa-driver vulkan-radeon xorg-xinit
 }
 
 function installDisplayManager(){
@@ -25,7 +25,7 @@ function installDisplayManager(){
 			;;
 	esac
 	echo "Installing display manager..."
-	pacman -Sp $install_
+	pacman -S $install_
 
 	# enabling display manager
 	case $1 in 
@@ -63,18 +63,18 @@ function installDesktopEnv(){
 	esac
 
 	echo "Setting up Desktop Environment..."
-	pacman -Sp $install_ 
-	pacman -Sp networkmanager
+	pacman -S $install_ 
+	pacman -S networkmanager
 	systemctl enable NetworkManager
 }
 
 function installGTKThemes(){
-	pacman -Sp arc-gtk-theme papirus-icon-theme
+	pacman -S arc-gtk-theme papirus-icon-theme
 }
 
 function installOtherApps(){
 	install_="firefox flatpak"
-	pacman -Sp $install_ $1
+	pacman -S $install_ $1
 }
 
 function configureXorg(){

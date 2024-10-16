@@ -4,7 +4,7 @@ source desktop_env.sh
 
 # installing some important programs first...
 echo 'Installing some important programs first...'
-pacman -Sp nano vim sudo openssh tmux
+pacman -S openssh tmux
 systemctl enable sshd.service
 
 installVideoDrivers

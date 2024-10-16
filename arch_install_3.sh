@@ -7,9 +7,4 @@ passwd morgan
 
 pacman -S xdg-user-dirs
 
-
-# now perform these commands to give morgan sudo priveleges:
-# su
-# visudo
-
 exit
