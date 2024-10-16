@@ -20,15 +20,15 @@
 
 3. Run ``lsblk`` to make note of what partitions and disks you want to use for your /boot/efi and / 
 
-4. Run ``arch_install_script_1.sh`` to install linux kernel and base apps.
+4. Run ``arch-install_1.sh`` to install linux kernel and base apps.
 
-5. Copy the ``arch-install`` folder to your new installation (/mnt), then ``arch-chroot`` into /mnt
+5. It should copy automatically, but if it doesn't, copy the ``arch-install`` folder to your new installation (/mnt), then ``arch-chroot`` into /mnt 
 
-6. From chroot, run ``arch_install_script_1_2.sh`` to install the graphics drivers and desktop environment.
+6. From chroot, run ``arch-install_1-2.sh`` to install the graphics drivers and desktop environment.
 
 7. Edit ``greeter-session`` in lightdm config file ``(/etc/lightdm/lightdm.conf)`` to say ``lightdm-slick-greeter`` if you want to use slick greeter
 
-8. Run ``arch_install_script_2.sh`` to setup GRUB bootloader.
+8. Run ``arch-install_2.sh`` to setup GRUB bootloader.
 
 9. Edit your grub config file, ``/etc/default/grub``. add 
    
@@ -44,12 +44,12 @@
    
    
 
-10. Run ``arch_install_3.sh`` to add your user account and create directories in home folder. 
+10. Run ``arch-install_3.sh`` to add your user account and create directories in home folder. 
 
 11. Do ``su``, then ``visudo`` to edit the sudoers file. Uncomment the line that lets any account in the wheel group perform any action. Save it and exit.
 
 12. Exit chroot
 
-13. Run ``arch_install_4.sh`` to generate your /etc/fstab file.
+13. Run ``arch-install_4.sh`` to generate your /etc/fstab file.
 
 14. Reboot into your newly installed Arch Linux system.
