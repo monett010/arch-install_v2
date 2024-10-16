@@ -51,7 +51,9 @@ configureXorg
 
 echo "Setting locale and hostname..."
 setLocale
-setHostname test-arch
+
+read -p "What would you like your hostname to be?" hostname_
+setHostname "$hostname_"
 
 
 # set root password
