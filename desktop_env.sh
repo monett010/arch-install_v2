@@ -21,7 +21,7 @@ function installDisplayManager(){
 			install_="xorg gdm"
 			;;
 		'kde')
-			install_="xorg sddm"
+			install_="xorg sddm sddm-kcm"
 			;;
 	esac
 	echo "Installing display manager..."
