@@ -86,11 +86,11 @@ function configureXorg(){
 function setLocale(){
 	# set the locale
 	touch /etc/locale.conf
-	echo "LANG=en_US.UTF-8" > locale.conf
+	echo "LANG=en_US.UTF-8" > /etc/locale.conf
 }
 
 function setHostname(){
 	# make hostname
-	touch hostname
-	echo "$1" > hostname
+	touch /etc/hostname
+	echo "$1" > /etc/hostname
 }
