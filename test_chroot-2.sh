@@ -1,0 +1,1 @@
+arch-chroot /mnt test_chroot.sh
