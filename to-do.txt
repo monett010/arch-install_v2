@@ -1,0 +1,15 @@
+Which greeter will you be installing?
+[1] lightdm 
+[2] lightdm slick greeter 
+[3] gdm (GNOME)
+[4] sddm (KDE)
+
+====
+
+case statement for display manager/greeter:
+lightdm
+lightdm-slick
+gdm
+sddm
+
+change desktop_env case statement; take out installDisplayManager 
