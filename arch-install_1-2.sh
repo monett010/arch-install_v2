@@ -10,6 +10,27 @@ systemctl enable sshd.service
 echo "Installing video drivers..."
 installVideoDrivers
 
+read -p "Which greeter will you be installing?
+[1] lightdm 
+[2] lightdm slick greeter 
+[3] gdm (GNOME)
+[4] sddm (KDE)" greeter_
+
+case $greeter_ in
+    '1')
+        installDisplayManager lightdm
+        ;;
+    '2')
+        installDisplayManager lightdm-slick
+        ;;
+    '3')
+        installDisplayManager gdm
+        ;;
+    '4')
+        installDisplayManager sddm
+        ;;
+esac
+
 read -p "What desktop environment will you be installing?
 [1] budgie
 [2] cinnamon
@@ -18,22 +39,22 @@ read -p "What desktop environment will you be installing?
 
 case $desktop_env in
     "1")
-        installDisplayManager budgie
+        # installDisplayManager budgie
         installDesktopEnv budgie
         installGTKThemes
         ;;
     "2")
-        installDisplayManager cinnamon
+        # installDisplayManager cinnamon
         installDesktopEnv cinnamon
         installGTKThemes
         ;;
     "3")
-        installDisplayManager gnome
+        # installDisplayManager gnome
         installDesktopEnv gnome
         installGTKThemes
         ;;
     "4")
-        installDisplayManager kde
+        # installDisplayManager kde
         installDesktopEnv kde
         ;;
 esac

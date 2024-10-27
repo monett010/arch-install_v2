@@ -11,16 +11,16 @@ function installVideoDrivers(){
 function installDisplayManager(){
 
 	case $1 in
-		'budgie')
-			install_="xorg lightdm lightdm-slick-greeter lightdm-gtk-greeter" 
+		'lightdm')
+			install_="xorg lightdm lightdm-gtk-greeter" 
 			;;
-		'cinnamon')
+		'lightdm-slick')
 			install_="xorg lightdm lightdm-slick-greeter lightdm-gtk-greeter"
 			;;
-		'gnome')
+		'gdm')
 			install_="xorg gdm"
 			;;
-		'kde')
+		'sddm')
 			install_="xorg sddm sddm-kcm"
 			;;
 	esac
@@ -29,16 +29,16 @@ function installDisplayManager(){
 
 	# enabling display manager
 	case $1 in 
-		'budgie')
+		'lightdm')
 			systemctl enable lightdm
 			;;
-		'cinnamon')
+		'lightdm-slick')
 			systemctl enable lightdm
 			;;
-		'gnome')
+		'gdm')
 			systemctl enable gdm
 			;;
-		'kde')
+		'sddm')
 			systemctl enable sddm
 			;;
 	esac
