@@ -1,1 +1,1 @@
-arch-chroot /mnt test_chroot.sh
+arch-chroot /mnt ./test_chroot.sh
