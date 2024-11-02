@@ -12,7 +12,7 @@ function installDisplayManager(){
 
 	case $1 in
 		'lightdm')
-			install_="xorg lightdm lightdm-gtk-greeter" 
+			install_="xorg lightdm lightdm-gtk-greeter"
 			;;
 		'lightdm-slick')
 			install_="xorg lightdm lightdm-slick-greeter lightdm-gtk-greeter"
@@ -28,7 +28,7 @@ function installDisplayManager(){
 	pacman -S $install_
 
 	# enabling display manager
-	case $1 in 
+	case $1 in
 		'lightdm')
 			systemctl enable lightdm
 			;;
@@ -49,7 +49,7 @@ function installDesktopEnv(){
 	case $1 in
 
 	'budgie')
-		install_="budgie budgie-desktop-view budgie-backgrounds network-manager-applet caja mate-terminal pluma kupfer plank"
+		install_="budgie budgie-desktop-view budgie-backgrounds network-manager-applet caja mate-terminal pluma kupfer plank xdg-user-dirs"
 		;;
 	'cinnamon')
 		install_="cinnamon mate-terminal pluma kupfer plank"
@@ -63,7 +63,7 @@ function installDesktopEnv(){
 	esac
 
 	echo "Setting up Desktop Environment..."
-	pacman -S $install_ 
+	pacman -S $install_
 	pacman -S networkmanager
 	systemctl enable NetworkManager
 }
