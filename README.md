@@ -53,3 +53,25 @@
 13. Run ``arch-install_4.sh`` to generate your /etc/fstab file.
 
 14. Reboot into your newly installed Arch Linux system.
+
+
+
+---
+
+Do this if you have a problem with gpg keys being signed:
+
+source: [pacman required key missing from keyring / Pacman &amp; Package Upgrade Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=187746)
+
+```bash
+
+pacman-key --init
+
+pacman-key --populate
+
+pacman-key --refresh-keys
+
+pacman -Sy archlinux-keyring
+
+```
+
+
