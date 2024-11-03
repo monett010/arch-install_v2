@@ -1,4 +1,4 @@
-## Arch Install Scripts (Budgie Desktop Environment)
+## Arch Install Scripts
 
 
 
@@ -53,8 +53,8 @@
 13. Run ``arch-install_4.sh`` to generate your /etc/fstab file.
 
 14. Reboot into your newly installed Arch Linux system.
-
-
+    
+    
 
 ---
 
@@ -73,5 +73,3 @@ pacman-key --refresh-keys
 pacman -Sy archlinux-keyring
 
 ```
-
-
