@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # setting up user and home dir...
-# pacman -S sudo
+
 function createUser () {
   read -p "Username for new user:" _username
   useradd -m -G wheel -s /usr/bin/bash "$_username"
@@ -15,7 +15,5 @@ function createUser () {
 }
 
 createUser
-
-# pacman -S xdg-user-dirs
 
 exit
