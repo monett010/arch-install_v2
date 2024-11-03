@@ -1,9 +1,20 @@
 #!/bin/bash
 
 # setting up user and home dir...
-pacman -S sudo
-useradd -m -G wheel -s /usr/bin/bash morgan
-passwd morgan
+# pacman -S sudo
+function createUser () {
+  read -p "Username for new user:" _username
+  useradd -m -G wheel -s /usr/bin/bash "$_username"
+  passwd "$_username"
+
+  read -p "Would you like to create another user? no (default)/yes" create_another
+
+  if [ "$create_another" == "y" ]; then
+    createUser
+  fi
+}
+
+createUser
 
 # pacman -S xdg-user-dirs
 
