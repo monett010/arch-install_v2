@@ -3,7 +3,7 @@
 source desktop_env.sh
 
 # installing some important programs first...
-echo "Installing some important programs first..."
+echo "Installing some important programs (Git, SSH, and Tmux) first..."
 pacman -S git openssh tmux
 systemctl enable sshd.service
 
@@ -11,8 +11,8 @@ echo "Installing video drivers..."
 installVideoDrivers
 
 read -p "Which greeter will you be installing?
-[1] lightdm 
-[2] lightdm slick greeter 
+[1] lightdm
+[2] lightdm slick greeter
 [3] gdm (GNOME)
 [4] sddm (KDE)" greeter_
 
@@ -64,7 +64,7 @@ esac
 # installGTKThemes
 
 # echo "Installing other apps..."
-read -p "Are there other apps you'd like to install?" other_apps
+read -p "Installing Firefox, Flatpak, Neofetch, and NeoVim. Are there other apps you'd like to install?" other_apps
 installOtherApps "$other_apps"
 
 echo "Configuring Xorg..."

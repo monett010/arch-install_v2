@@ -73,7 +73,7 @@ function installGTKThemes(){
 }
 
 function installOtherApps(){
-	install_="firefox flatpak neofetch"
+	install_="firefox flatpak neofetch neovim"
 	pacman -S $install_ $1
 }
 
