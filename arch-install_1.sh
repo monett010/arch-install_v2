@@ -8,9 +8,8 @@ read -p "What partition does /boot/efi go? " bootloader_
 
 read -p "What partition does / go? " root
 
-
-mount "$root" /mnt
 mount "$bootloader_" /mnt/boot/efi
+mount "$root" /mnt
 
 # installing linux kernel, headers, firmware, and base packages
 echo 'Installing linux kernel, headers, firmware, and base packages...'
