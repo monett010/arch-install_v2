@@ -16,13 +16,13 @@
    
    ```
 
-2. Install Git using ``pacman -S git`` (or ``pacman -Sy git`` if it complains), then clone the arch-install repository into the live disk - https://github.com/monett010/arch-install.git
+2. Install Git using ``pacman -S git`` (or ``pacman -Sy git`` if it complains), then clone the arch-install repository into the live disk - https://github.com/monett010/arch-install_v2.git
 
 3. Run ``lsblk`` to make note of what partitions and disks you want to use for your /boot/efi and / 
 
 4. Run ``arch-install_1.sh`` to install linux kernel and base apps.
 
-5. It should copy automatically, but if it doesn't, copy the ``arch-install`` folder to your new installation (/mnt), then ``arch-chroot`` into /mnt 
+5. It should copy automatically, but if it doesn't, copy the ``arch-install_v2`` folder to your new installation (/mnt), then ``arch-chroot`` into /mnt 
 
 6. From chroot, run ``arch-install_1-2.sh`` to install the graphics drivers and desktop environment.
 
