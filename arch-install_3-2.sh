@@ -3,10 +3,10 @@
 echo 'Creating /boot/efi directory...'
 mkdir /boot/efi
 
-read -p "What is the /boot/efi partition?" boot
+read -p "What is the /boot/efi partition?" boot_
 
 echo 'Mounting /boot/efi partition...'
-mount "$boot" /boot/efi
+mount "$boot_" /boot/efi
 
 # setting up grub
 echo 'Setting up GRUB...'
