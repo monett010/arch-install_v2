@@ -28,7 +28,15 @@
 
 7. Edit ``greeter-session`` in lightdm config file ``(/etc/lightdm/lightdm.conf)`` to say ``lightdm-slick-greeter`` if you want to use slick greeter
 
-8. Run ``arch-install_2.sh`` to setup GRUB bootloader.
+8. Run ``arch-install_2.sh`` to create users.
+
+9. Do ``su``, then ``visudo`` to edit the sudoers file. Uncomment the line that lets any account in the wheel group perform any action. Save it and exit.
+
+8. Exit chroot. 
+
+9. Run ``arch-install_3.sh`` to unmount partitions. After it runs, it should automatically put you back in chroot.
+
+8. From chroot, run ``arch-install_3-2.sh`` to setup GRUB bootloader.
 
 9. Edit your grub config file, ``/etc/default/grub``. add 
    
@@ -44,11 +52,7 @@
    
    
 
-10. Run ``arch-install_3.sh`` to add your user account and create directories in home folder. 
-
-11. Do ``su``, then ``visudo`` to edit the sudoers file. Uncomment the line that lets any account in the wheel group perform any action. Save it and exit.
-
-12. Exit chroot
+10. Exit chroot
 
 13. Run ``arch-install_4.sh`` to generate your /etc/fstab file.
 

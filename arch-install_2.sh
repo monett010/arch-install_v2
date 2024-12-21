@@ -15,5 +15,3 @@ function createUser () {
 }
 
 createUser
-
-exit
