@@ -7,7 +7,7 @@ function createUser () {
   useradd -m -G wheel -s /usr/bin/bash "$_username"
   passwd "$_username"
 
-  read -p "Would you like to create another user? no (default)/yes" create_another
+  read -p "Would you like to create another user? y/n (default)" create_another
 
   if [ "$create_another" == "y" ]; then
     createUser
