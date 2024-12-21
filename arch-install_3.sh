@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-read -p "What partition does / go?" $root_ 
+read -p "What partition does / go?" root_ 
 
 echo 'Unmounting partitions...'
 umount /mnt
