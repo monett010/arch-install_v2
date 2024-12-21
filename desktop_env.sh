@@ -73,7 +73,7 @@ function installGTKThemes(){
 }
 
 function installOtherApps(){
-	install_="firefox flatpak neofetch neovim"
+	install_="firefox flatpak neofetch neovim zsh python-virtualenv python-pip"
 	pacman -S $install_ $1
 }
 
