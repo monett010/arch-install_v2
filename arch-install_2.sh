@@ -1,9 +1,19 @@
 #!/bin/bash
 
-# this should be run as chroot
-# setting up grub
-pacman -S grub efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
+# setting up user and home dir...
 
-# echo "Don't forget to add your root directory to your grub config file (/etc/default/grub)"
+function createUser () {
+  read -p "Username for new user:" _username
+  useradd -m -G wheel -s /usr/bin/bash "$_username"
+  passwd "$_username"
+
+  read -p "Would you like to create another user? y/n (default)" create_another
+
+  if [ "$create_another" == "y" ]; then
+    createUser
+  fi
+}
+
+createUser
+
+exit
