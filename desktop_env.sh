@@ -73,7 +73,8 @@ function installGTKThemes(){
 }
 
 function installOtherApps(){
-	install_="firefox flatpak neofetch neovim zsh python-virtualenv python-pip nodejs"
+	install_="firefox flatpak neofetch neovim zsh python-virtualenv python-pip nodejs ttf-meslo-nerd, cascadia
+otf-cascadia-code ttf-cascadia-code ttf-cascadia-code-nerd"
 	pacman -S $install_ $1
 }
 

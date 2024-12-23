@@ -64,7 +64,7 @@ esac
 # installGTKThemes
 
 # echo "Installing other apps..."
-read -p "Installing Firefox, Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, and Python Pip. Are there other apps you'd like to install?" other_apps
+read -p "Installing Firefox, Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, NodeJS, and Cascadia fonts. Are there other apps you'd like to install?" other_apps
 installOtherApps "$other_apps"
 
 echo "Configuring Xorg..."
