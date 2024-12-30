@@ -55,7 +55,7 @@ function installDesktopEnv(){
 		install_="cinnamon mate-terminal pluma kupfer plank"
 		;;
 	'kde')
-		install_="plasma-desktop kde-utilities-meta kde-system-meta plasma-nm plasma-pa"
+		install_="plasma-desktop kde-utilities-meta kde-system-meta plasma-nm plasma-pa bluedevil"
 		;;
 	'gnome')
 		install_="gnome"
