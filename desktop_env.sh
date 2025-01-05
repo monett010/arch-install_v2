@@ -85,6 +85,11 @@ function configureXorg(){
 }
 
 function setLocale(){
+	# remove the default /etc/locale.gen. then copy over my uncommented version. this file has the correct US English UTF-8 locale uncommented.
+	rm /etc/locale.gen
+	cp locale.gen /etc
+	# run locale-gen
+	locale-gen
 	# set the locale
 	touch /etc/locale.conf
 	echo "LANG=en_US.UTF-8" > /etc/locale.conf
