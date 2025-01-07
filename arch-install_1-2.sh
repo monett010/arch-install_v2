@@ -63,6 +63,9 @@ esac
 # installDesktopEnv kde
 # installGTKThemes
 
+echo "Installing fonts..."
+installFonts
+
 # echo "Installing other apps..."
 read -p "Installing Firefox, Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, NodeJS, NTFS drivers, and Cascadia fonts. Are there other apps you'd like to install?" other_apps
 installOtherApps "$other_apps"

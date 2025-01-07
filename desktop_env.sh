@@ -73,9 +73,14 @@ function installGTKThemes(){
 }
 
 function installOtherApps(){
-	install_="firefox flatpak neofetch neovim zsh python-virtualenv python-pip nodejs ttf-meslo-nerd, cascadia
-otf-cascadia-code ttf-cascadia-code ttf-cascadia-code-nerd ntfs-3g"
+	install_="firefox flatpak neofetch neovim zsh python-virtualenv python-pip nodejs ntfs-3g"
 	pacman -S $install_ $1
+}
+
+# installs fonts. this was originally a part of installOtherApps()
+function installFonts(){
+	install_="ttf-meslo-nerd cascadia otf-cascadia-code ttf-cascadia-code ttf-cascadia-code-nerd"
+	pacman -S $install_
 }
 
 function configureXorg(){
