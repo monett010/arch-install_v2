@@ -63,7 +63,7 @@ function installDesktopEnv(){
 	esac
 
 	echo "Setting up Desktop Environment..."
-	pacman -S $install_
+	pacman -S $install_ firefox
 	pacman -S networkmanager
 	systemctl enable NetworkManager
 }
@@ -73,7 +73,7 @@ function installGTKThemes(){
 }
 
 function installOtherApps(){
-	install_="firefox flatpak neofetch neovim zsh python-virtualenv python-pip nodejs ntfs-3g"
+	install_="flatpak neofetch neovim zsh python-virtualenv python-pip nodejs ntfs-3g"
 	pacman -S $install_ $1
 }
 
