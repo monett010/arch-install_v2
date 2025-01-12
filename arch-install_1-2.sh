@@ -46,8 +46,9 @@ read -p "What desktop environment will you be installing?
 [1] budgie
 [2] cinnamon
 [3] gnome
-[4] kde
-[5] none (default) " desktop_env
+[4] kde (minimal)
+[5] kde (kitchen sink)
+[6] none (default) " desktop_env
 
 case $desktop_env in
     "1")
@@ -70,6 +71,9 @@ case $desktop_env in
         installDesktopEnv kde
         ;;
     "5")
+        installDesktopEnv kde-all
+        ;;
+    "6")
         echo "No desktop environment will be installed. Installing NetworkManager."
        	pacman -S networkmanager
         systemctl enable NetworkManager

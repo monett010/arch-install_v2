@@ -57,6 +57,9 @@ function installDesktopEnv(){
 	'kde')
 		install_="plasma-desktop kde-utilities-meta kde-system-meta plasma-nm plasma-pa bluedevil kupfer"
 		;;
+	'kde-all')
+	   install_="plasma"
+		;;
 	'gnome')
 		install_="gnome"
 		;;
