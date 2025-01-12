@@ -7,6 +7,10 @@ echo "Installing some important programs (Git, SSH, and Tmux) first..."
 pacman -S git openssh tmux
 systemctl enable sshd.service
 
+# installing NTFS driver
+echo "Installing NTFS driver..."
+pacman -S ntfs-3g
+
 echo "Installing video drivers..."
 installVideoDrivers
 
@@ -67,7 +71,7 @@ echo "Installing fonts..."
 installFonts
 
 # echo "Installing other apps..."
-read -p "Installing Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, NodeJS, and NTFS drivers. Are there other apps you'd like to install?" other_apps
+read -p "Installing Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, and NodeJS. Are there other apps you'd like to install?" other_apps
 installOtherApps "$other_apps"
 
 echo "Configuring Xorg..."
