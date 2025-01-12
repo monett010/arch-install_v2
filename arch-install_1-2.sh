@@ -89,7 +89,7 @@ esac
 # installDesktopEnv kde
 # installGTKThemes
 
-echo "Installing fonts..."
+echo "Installing Meslo and Cascadia fonts..."
 installFonts
 
 # echo "Installing other apps..."
