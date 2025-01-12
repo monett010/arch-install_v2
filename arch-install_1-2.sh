@@ -18,7 +18,8 @@ read -p "Which greeter will you be installing?
 [1] lightdm
 [2] lightdm slick greeter
 [3] gdm (GNOME)
-[4] sddm (KDE)" greeter_
+[4] sddm (KDE)
+[5] none (default) " greeter_
 
 case $greeter_ in
     '1')
@@ -32,6 +33,12 @@ case $greeter_ in
         ;;
     '4')
         installDisplayManager sddm
+        ;;
+    '5')
+        echo 'No greeter will be installed.'
+        ;;
+    *)
+        echo 'No greeter will be installed.'
         ;;
 esac
 
