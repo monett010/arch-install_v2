@@ -3,8 +3,8 @@
 source desktop_env.sh
 
 # installing some important programs first...
-echo "Installing some important programs (Git, SSH, and Tmux) first..."
-pacman -S git openssh tmux
+echo "Installing some important programs (Git, SSH, Wget, and Tmux) first..."
+pacman -S git openssh wget tmux
 systemctl enable sshd.service
 
 # installing NTFS driver
