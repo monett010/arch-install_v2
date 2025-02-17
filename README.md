@@ -58,8 +58,7 @@
 
 14. Reboot into your newly installed Arch Linux system.
     
-    
-
+Grub wallpaper from: https://pkgbuild.com/~foxboron/ArchlinuxGraphics/
 ---
 
 Do this if you have a problem with gpg keys being signed:
