@@ -44,7 +44,7 @@
    root=/dev/[sdyourrootpartition]
    ```
 
-Edit /etc/default/grub and uncomment
+Add/uncomment the following line in ``/etc/default/grub``:
 ```plaintext
 GRUB_BACKGROUND="/usr/share/images/arch_wallpaper.png"
 ```
