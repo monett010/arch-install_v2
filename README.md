@@ -43,6 +43,12 @@
    ```plaintext
    root=/dev/[sdyourrootpartition]
    ```
+
+Edit /etc/default/grub and uncomment
+```plaintext
+GRUB_BACKGROUND="/usr/share/images/arch_wallpaper.png"
+```
+(Grub wallpaper from: https://pkgbuild.com/~foxboron/ArchlinuxGraphics/)
    
    then run 
    
@@ -58,7 +64,7 @@
 
 14. Reboot into your newly installed Arch Linux system.
     
-Grub wallpaper from: https://pkgbuild.com/~foxboron/ArchlinuxGraphics/
+
 ---
 
 Do this if you have a problem with gpg keys being signed:
