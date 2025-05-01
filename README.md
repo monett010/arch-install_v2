@@ -3,6 +3,7 @@
 
 
 1. Boot into the live disk and make sure you're connected to the Internet
+
 To connect to the internet (source: https://www.reddit.com/r/archlinux/comments/kj65gc/how_to_connect_to_wifi_when_installing_arch/ )
    
    ```bash
