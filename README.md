@@ -3,7 +3,7 @@
 
 
 1. Boot into the live disk and make sure you're connected to the Internet
-       To connect to the internet (source: https://www.reddit.com/r/archlinux/comments/kj65gc/how_to_connect_to_wifi_when_installing_arch/ )
+To connect to the internet (source: https://www.reddit.com/r/archlinux/comments/kj65gc/how_to_connect_to_wifi_when_installing_arch/ )
    
    ```bash
    
@@ -30,15 +30,15 @@
 
 8. Run ``arch-install_2.sh`` to create users.
 
-9. Do ``su``, then ``visudo`` to edit the sudoers file. Uncomment the line that lets any account in the wheel group perform any action. Save it and exit.
+9.  Do ``su``, then ``visudo`` to edit the sudoers file. Uncomment the line that lets any account in the wheel group perform any action. Save it and exit.
 
-8. Exit chroot. 
+10. Exit chroot. 
 
-9. Run ``arch-install_3.sh`` to unmount partitions. After it runs, it should automatically put you back in chroot.
+11. Run ``arch-install_3.sh`` to unmount partitions. After it runs, it should automatically put you back in chroot.
 
-8. From chroot, run ``arch-install_3-2.sh`` to setup GRUB bootloader.
+12. From chroot, run ``arch-install_3-2.sh`` to setup GRUB bootloader.
 
-9. Edit your grub config file, ``/etc/default/grub``. add 
+13. Edit your grub config file, ``/etc/default/grub``. add 
    
    ```plaintext
    root=/dev/[sdyourrootpartition]
