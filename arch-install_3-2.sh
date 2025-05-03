@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# If the /boot/efi directory doesn't exist, create it.
+if [ ! -d /boot/efi ]
+then
 echo 'Creating /boot/efi directory...'
 mkdir /boot/efi
+fi
 
 read -p "What is the /boot/efi partition?" boot_
 
