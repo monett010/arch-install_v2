@@ -18,7 +18,7 @@ pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
-
+# If the /usr/share/images directory doesn't exist, create it before copying the GRUB wallpaper
 if [ ! -d /usr/share/images ]
 then
 mkdir /usr/share/images
