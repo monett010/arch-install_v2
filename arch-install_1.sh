@@ -13,7 +13,7 @@ mount "$root" /mnt
 
 # installing linux kernel, headers, firmware, and base packages
 echo 'Installing linux kernel, headers, firmware, and base packages...'
-pacstrap -K /mnt linux linux-headers linux-firmware base base-devel nano vim
+pacstrap -K /mnt linux linux-headers linux-firmware base base-devel nano vim pacman-contrib
 
 cp -r ~/arch-install_v2 /mnt
 
