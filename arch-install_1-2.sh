@@ -89,8 +89,12 @@ esac
 # installDesktopEnv kde
 # installGTKThemes
 
-echo "Installing Meslo and Cascadia fonts..."
-installFonts
+read -p "Would you like to install Meslo and Cascadia nerd fonts? (y/n) " _do_fonts
+
+if [ "$_do_fonts" == "y" ]; then 
+    echo "Installing Meslo and Cascadia fonts..."
+    installFonts
+fi
 
 # echo "Installing other apps..."
 echo "Installing Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, and NodeJS."
