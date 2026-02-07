@@ -93,8 +93,14 @@ echo "Installing Meslo and Cascadia fonts..."
 installFonts
 
 # echo "Installing other apps..."
-read -p "Installing Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, and NodeJS. Are there other apps you'd like to install?" other_apps
-installOtherApps "$other_apps"
+echo "Installing Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, and NodeJS."
+installOtherApps
+
+read -p  "What other apps you'd like to install? (input apps, or press enter for none): " other_apps
+
+if [ -n "$other_apps" ]; then
+    pacman -S "$other_apps"
+fi
 
 echo "Configuring Xorg..."
 configureXorg
