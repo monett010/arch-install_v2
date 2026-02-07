@@ -15,27 +15,27 @@ echo "Installing video drivers..."
 installVideoDrivers
 
 read -p "Which greeter will you be installing?
-[1] lightdm
-[2] lightdm slick greeter
-[3] gdm (GNOME)
-[4] sddm (KDE)
-[5] none (default) " greeter_
+[1] none (default)
+[2] lightdm
+[3] lightdm slick greeter
+[4] gdm (GNOME)
+[5] sddm (KDE) " greeter_
 
 case $greeter_ in
     '1')
-        installDisplayManager lightdm
+        echo 'No greeter will be installed.'
         ;;
     '2')
-        installDisplayManager lightdm-slick
+        installDisplayManager lightdm
         ;;
     '3')
-        installDisplayManager gdm
+        installDisplayManager lightdm-slick
         ;;
     '4')
-        installDisplayManager sddm
+        installDisplayManager gdm
         ;;
     '5')
-        echo 'No greeter will be installed.'
+        installDisplayManager sddm
         ;;
     *)
         echo 'No greeter will be installed.'
@@ -43,50 +43,50 @@ case $greeter_ in
 esac
 
 read -p "What desktop environment will you be installing?
-[1] budgie
-[2] cinnamon
-[3] gnome
-[4] kde (minimal)
-[5] kde (kitchen sink)
-[6] none (default) " desktop_env
+[1] none (default)
+[2] budgie
+[3] cinnamon
+[4] gnome
+[5] kde (minimal)
+[6] kde (kitchen sink) " desktop_env
 
 case $desktop_env in
     "1")
+        echo "No desktop environment will be installed. Installing NetworkManager."
+       	pacman -S networkmanager
+        systemctl enable NetworkManager
+        ;;
+    "2")
         # installDisplayManager budgie
         installDesktopEnv budgie
         installGTKThemes
         echo "Configuring Xorg..."
         configureXorg
         ;;
-    "2")
+    "3")
         # installDisplayManager cinnamon
         installDesktopEnv cinnamon
         installGTKThemes
         echo "Configuring Xorg..."
         configureXorg
         ;;
-    "3")
+    "4")
         # installDisplayManager gnome
         installDesktopEnv gnome
         installGTKThemes
         echo "Configuring Xorg..."
         configureXorg
         ;;
-    "4")
+    "5")
         # installDisplayManager kde
         installDesktopEnv kde
         echo "Configuring Xorg..."
         configureXorg
         ;;
-    "5")
+    "6")
         installDesktopEnv kde-all
         echo "Configuring Xorg..."
         configureXorg
-        ;;
-    "6")
-        echo "No desktop environment will be installed. Installing NetworkManager."
-       	pacman -S networkmanager
-        systemctl enable NetworkManager
         ;;
     *)
         echo "No desktop environment will be installed. Installing NetworkManager."
