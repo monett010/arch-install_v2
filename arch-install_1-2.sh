@@ -55,23 +55,33 @@ case $desktop_env in
         # installDisplayManager budgie
         installDesktopEnv budgie
         installGTKThemes
+        echo "Configuring Xorg..."
+        configureXorg
         ;;
     "2")
         # installDisplayManager cinnamon
         installDesktopEnv cinnamon
         installGTKThemes
+        echo "Configuring Xorg..."
+        configureXorg
         ;;
     "3")
         # installDisplayManager gnome
         installDesktopEnv gnome
         installGTKThemes
+        echo "Configuring Xorg..."
+        configureXorg
         ;;
     "4")
         # installDisplayManager kde
         installDesktopEnv kde
+        echo "Configuring Xorg..."
+        configureXorg
         ;;
     "5")
         installDesktopEnv kde-all
+        echo "Configuring Xorg..."
+        configureXorg
         ;;
     "6")
         echo "No desktop environment will be installed. Installing NetworkManager."
