@@ -116,9 +116,6 @@ if [ -n "$other_apps" ]; then
     pacman -S "$other_apps"
 fi
 
-echo "Configuring Xorg..."
-configureXorg
-
 echo "Setting locale and hostname..."
 setLocale
 
