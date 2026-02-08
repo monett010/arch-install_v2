@@ -76,7 +76,7 @@ function installGTKThemes(){
 }
 
 function installOtherApps(){
-	install_="flatpak neofetch neovim zsh python-virtualenv python-pip nodejs"
+	install_="flatpak fastfetch neovim zsh python-virtualenv python-pip nodejs"
 	pacman -S $install_ $1
 }
 
