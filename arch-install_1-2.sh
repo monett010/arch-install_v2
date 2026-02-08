@@ -107,7 +107,7 @@ if [ "$_do_fonts" == "y" ]; then
 fi
 
 # echo "Installing other apps..."
-echo "Installing Flatpak, Neofetch, NeoVim, Zsh, Python Virtualenv, Python Pip, and NodeJS."
+echo "Installing Flatpak, Fastfetch, NeoVim, Zsh, Python Virtualenv, Python Pip, and NodeJS."
 installOtherApps
 
 read -p  "What other apps you'd like to install? (input apps, or press enter for none): " other_apps
