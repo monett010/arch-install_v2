@@ -26,3 +26,8 @@ fi
 
 echo 'Copying GRUB wallpaper...'
 cp arch_wallpaper.png /usr/share/images/arch_wallpaper.png
+
+read -p "Would you like to edit /etc/default/grub now? (y/n): " edit_grub
+if [ "$edit_grub" == "y" ]; then
+    nano /etc/default/grub
+fi
