@@ -110,7 +110,7 @@ fi
 echo "Installing Flatpak, Fastfetch, NeoVim, Zsh, Python Virtualenv, Python Pip, and NodeJS."
 installOtherApps
 
-read -p  "What other apps you'd like to install? (input apps, or press enter for none): " other_apps
+read -p  "Any other apps you'd like to install? (input apps, or press enter for none): " other_apps
 
 if [ -n "$other_apps" ]; then
     pacman -S "$other_apps"
