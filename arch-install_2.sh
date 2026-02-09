@@ -1,5 +1,15 @@
 #!/bin/bash
 
+echo "Setting locale and hostname..."
+setLocale
+
+read -p "What would you like your hostname to be?" hostname_
+setHostname "$hostname_"
+
+# set root password
+echo "Setting the root password..."
+passwd
+
 # setting up user and home dir...
 
 function createUser () {

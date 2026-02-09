@@ -115,13 +115,3 @@ read -p  "Any other apps you'd like to install? (input apps, or press enter for 
 if [ -n "$other_apps" ]; then
     pacman -S "$other_apps"
 fi
-
-echo "Setting locale and hostname..."
-setLocale
-
-read -p "What would you like your hostname to be?" hostname_
-setHostname "$hostname_"
-
-# set root password
-echo "Setting the root password..."
-passwd
