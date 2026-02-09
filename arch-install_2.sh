@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source desktop_env.sh
+
 echo "Setting locale and hostname..."
 setLocale
 
