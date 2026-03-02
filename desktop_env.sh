@@ -71,13 +71,6 @@ function installDesktopEnv(){
 	systemctl enable NetworkManager
 }
 
-function installArcGTKTheme(){
-	echo "Installing Arc GTK theme..."
-	git clone https://aur.archlinux.org/arc-gtk-theme.git /arc-gtk-theme
-	cd /arc-gtk-theme
-	makepkg -is --skippgpcheck
-}
-
 function installGTKThemes(){
 	echo "Installing Papirus icon theme..."
 	pacman -S papirus-icon-theme
