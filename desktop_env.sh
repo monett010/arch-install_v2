@@ -81,7 +81,6 @@ function installArcGTKTheme(){
 function installGTKThemes(){
 	echo "Installing Papirus icon theme..."
 	pacman -S papirus-icon-theme
-	installArcGTKTheme
 }
 
 function installOtherApps(){
