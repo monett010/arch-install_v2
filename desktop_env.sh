@@ -52,7 +52,7 @@ function installDesktopEnv(){
 		install_="budgie budgie-desktop-view budgie-backgrounds network-manager-applet caja mate-terminal pluma libvoikko nuspell hunspell hspell aspell kupfer plank xdg-user-dirs"
 		;;
 	'cinnamon')
-		install_="cinnamon mate-terminal budgie-desktops pluma libvoikko nuspell hunspell hspell aspell kupfer plank"
+		install_="cinnamon mate-terminal budgie-backgrounds pluma libvoikko nuspell hunspell hspell aspell kupfer plank"
 		;;
 	'kde')
 		install_="plasma-desktop kde-utilities-meta kde-system-meta plasma-nm plasma-pa bluedevil kupfer"
