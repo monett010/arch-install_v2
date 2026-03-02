@@ -83,7 +83,8 @@ function installOtherApps(){
 
 # installs fonts. this was originally a part of installOtherApps()
 function installFonts(){
-	install_="ttf-meslo-nerd cascadia otf-cascadia-code ttf-cascadia-code ttf-cascadia-code-nerd"
+	# install_="ttf-meslo-nerd cascadia otf-cascadia-code ttf-cascadia-code ttf-cascadia-code-nerd"
+	install_="ttf-meslo-nerd otf-cascadia-code ttf-cascadia-code"
 	pacman -S $install_
 }
 
