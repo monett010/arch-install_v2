@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source desktop_env.sh
+source /arch-install_v2/desktop_env.sh
 
 # installing some important programs first...
 echo "Installing some important programs (Git, SSH, Wget, and Tmux) first..."
