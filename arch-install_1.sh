@@ -37,4 +37,12 @@ esac
 
 cp -r ~/arch-install_v2 /mnt
 
-arch-chroot /mnt
+read -p "Would you like to do the quick install? (y/n): " quick
+if [ "$quick" == "y" ]; then
+    arch-chroot /mnt chmod +x /arch-install_v2/*
+    arch-chroot /mnt ./arch-install_v2/arch-install_1-2.sh
+    arch-chroot /mnt ./arch-install_v2/arch-install_2.sh
+    arch-chroot /mnt ./arch-install_v2/arch-install_3.sh
+else 
+    arch-chroot /mnt
+fi
