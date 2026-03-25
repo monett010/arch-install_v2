@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source desktop_env.sh
+source /arch-install_v2.sh/desktop_env.sh
 
 echo "Setting locale and hostname..."
 setLocale
