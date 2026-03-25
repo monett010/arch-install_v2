@@ -39,13 +39,7 @@ cp -r ~/arch-install_v2 /mnt
 
 read -p "Would you like to do the quick install? (y/n): " quick
 if [ "$quick" == "y" ]; then
-    arch-chroot /mnt chmod +x /arch-install_v2/*
-    exit
-    arch-chroot /mnt ./arch-install_v2/arch-install_1-2.sh
-    exit
-    arch-chroot /mnt ./arch-install_v2/arch-install_2.sh
-    exit
-    arch-chroot /mnt ./arch-install_v2/arch-install_3.sh
+    arch-chroot /mnt ./arch-install_v2/arch-install_quick.sh
 else 
     arch-chroot /mnt
 fi
