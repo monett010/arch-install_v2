@@ -115,3 +115,48 @@ read -p  "Any other apps you'd like to install? (input apps, or press enter for 
 if [ -n "$other_apps" ]; then
     pacman -S "$other_apps"
 fi
+
+function setLocale(){
+	# remove the default /etc/locale.gen. then copy over my uncommented version. this file has the correct US English UTF-8 locale uncommented.
+	rm /etc/locale.gen
+	cp arch-install_v2/locale.gen /etc
+	# run locale-gen
+	locale-gen
+	# set the locale
+	touch /etc/locale.conf
+	echo "LANG=en_US.UTF-8" > /etc/locale.conf
+}
+
+function setHostname(){
+	# make hostname
+	touch /etc/hostname
+	echo "$1" > /etc/hostname
+}
+
+echo "Setting locale and hostname..."
+setLocale
+
+read -p "What would you like your hostname to be?" hostname_
+setHostname "$hostname_"
+
+# set root password
+echo "Setting the root password..."
+passwd
+
+# setting up user and home dir...
+
+function createUser () {
+  read -p "Username for new user:" _username
+  useradd -m -G wheel -s /usr/bin/bash "$_username"
+  passwd "$_username"
+
+  read -p "Would you like to create another user? y/n (default)" create_another
+
+  if [ "$create_another" == "y" ]; then
+    createUser
+  fi
+}
+
+createUser
+
+echo "Don't forget to run visudo to give sudo privileges to users."
