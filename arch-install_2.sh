@@ -27,3 +27,5 @@ function createUser () {
 }
 
 createUser
+
+echo "Don't forget to run su, then visudo to give sudo privileges to users."
