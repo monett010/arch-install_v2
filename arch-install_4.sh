@@ -8,11 +8,7 @@ function mountExtraPartitions () {
         read -p "Please type the partition you'd like to mount: " partition
         read -p "Please type where you'd like to mount it (no preceding slashes): " location
         mount --mkdir "$partition" /mnt/"$location"
-
-        read -p "Would you like to add another partition? y/n (default)" mount_another
-        if [ "$mount_another" == "y" ]; then
-            mountExtraPartitions
-        fi
+        mountExtraPartitions
     fi
 }
 mountExtraPartitions
