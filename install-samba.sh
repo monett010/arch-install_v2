@@ -4,7 +4,10 @@
 # Meant to be run after install when user is logged in
 
 echo "Installing Samba, wsdd, and Avahi..."
-sudo pacman -S samba wsdd avahi
+sudo pacman -S samba wsdd avahi --noconfirm
+
+echo "Installing gvfs..."
+sudo pacman -S gvfs gvfs-dnssd gvfs-goa gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-smb gvfs-wsdd --noconfirm
 
 echo "Creating /etc/samba/smb.conf..."
 echo "[Public]
