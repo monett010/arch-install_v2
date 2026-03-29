@@ -9,14 +9,14 @@ sudo pacman -S samba wsdd avahi --noconfirm
 echo "Installing gvfs..."
 sudo pacman -S gvfs gvfs-dnssd gvfs-goa gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-smb gvfs-wsdd --noconfirm
 
-echo "Creating /etc/samba/smb.conf..."
-echo "[Public]
-comment = the public directory
-path = /home/morgan/Public
-public = yes
-guest ok = yes
-browseable = yes
-read only = no" >> smb.conf
+echo "Copying /etc/samba/smb.conf..."
+# echo "[Public]
+# comment = the public directory
+# path = /home/morgan/Public
+# public = yes
+# guest ok = yes
+# browseable = yes
+# read only = no" >> smb.conf
 
 sudo cp smb.conf /etc/samba/smb.conf 
 
