@@ -113,5 +113,5 @@ installOtherApps
 read -p  "Any other apps you'd like to install? (input apps, or press enter for none): " other_apps
 
 if [ -n "$other_apps" ]; then
-    pacman -S "$other_apps"
+    pacman -S $other_apps
 fi
