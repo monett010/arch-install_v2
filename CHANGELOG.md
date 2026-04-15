@@ -2,7 +2,7 @@
 *Last updated: 4/15/26*
 
 ### Mar 2026
-- Now, you will be prompted to optionally mount other partitions before generating fstab
+- Now, asks if you want to mount other partitions before generating fstab
 - Added scripts to optionally install Arc GTK Theme, Mint Themes, and Samba after install 
 - There is now a reminder to give sudo privileges after user creation
 - Bluetooth (blueman), touch gestures (touchegg), and xdg-user-dirs have now been added to the Cinnamon install
