@@ -6,6 +6,7 @@
 - Added scripts to optionally install Arc GTK Theme, Mint Themes, and Samba after install 
 - There is now a reminder to give sudo privileges after user creation
 - Bluetooth (blueman), touch gestures (touchegg), and xdg-user-dirs have now been added to the Cinnamon install
+- Added os-prober to GRUB install
 - Fixed bug in which "Would you like to install other apps?" read multiple arguments as only one
 
 ### Feb 2026
