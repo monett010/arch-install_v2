@@ -1,9 +1,10 @@
 ## Arch Install Scripts Changelog
-*Createad 4/14/26*
-*Last updated: 4/15/26*
+Createad 4/14/26
+*Last updated: 4/23/26*
 
 ### Apr 2026
 - Added onscreen keyboard (onboard) to Cinnamon install
+- Added Bluetooth install (bluez, bluez-utils, bluez-deprecated-tools)
 
 ### Mar 2026
 - Now asks if you want to mount other partitions before generating fstab
