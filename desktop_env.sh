@@ -71,6 +71,12 @@ function installDesktopEnv(){
 	systemctl enable NetworkManager
 }
 
+function installBluetooth(){
+	sudo pacman -S bluez bluez-utils bluez-deprecated-tools
+	sudo systemctl enable bluetooth
+	sudO systemctl start bluetooth 
+}
+
 function installGTKThemes(){
 	echo "Installing Papirus icon theme..."
 	pacman -S papirus-icon-theme

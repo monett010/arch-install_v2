@@ -99,6 +99,9 @@ esac
 # installDesktopEnv kde
 # installGTKThemes
 
+echo "Installing Bluetooth..."
+installBluetooth
+
 read -p "Would you like to install Meslo and Cascadia nerd fonts? (y/n) " _do_fonts
 
 if [ "$_do_fonts" == "y" ]; then 
