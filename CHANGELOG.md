@@ -1,5 +1,5 @@
 ## Arch Install Scripts Changelog
-Createad 4/14/26
+Created 4/14/26
 *Last updated: 4/23/26*
 
 ### Apr 2026
