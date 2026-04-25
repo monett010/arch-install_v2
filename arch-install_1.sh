@@ -10,11 +10,14 @@ read -p "What partition does / go? " root
 
 read -p "Would you like a separate /home partition? y/n (default): " answer
 if [ "$answer" == "y" ]; then
-    read -p "Please type the partition you'd like to make your /home partition: " partition
-    mount --mkdir "$partition" /mnt/home
+    read -p "Please type the partition you'd like to make your /home partition: " home_
+    echo "Mounting ${home_} as /home..."
+    mount --mkdir "$home_" /mnt/home
 fi
 
+echo "Mounting ${bootloader_} as /boot/efi..."
 mount "$bootloader_" /mnt/boot/efi
+echo "Mounting ${root} as /..."
 mount "$root" /mnt
 
 # installing linux kernel, headers, firmware, and base packages
