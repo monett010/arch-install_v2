@@ -8,6 +8,12 @@ read -p "What partition does /boot/efi go? " bootloader_
 
 read -p "What partition does / go? " root
 
+read -p "Would you like a separate /home partition? y/n (default): " answer
+if [ "$answer" == "y" ]; then
+    read -p "Please type the partition you'd like to make your /home partition: " partition
+    mount --mkdir "$partition" /mnt/home
+fi
+
 mount "$bootloader_" /mnt/boot/efi
 mount "$root" /mnt
 
