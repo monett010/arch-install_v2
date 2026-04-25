@@ -6,6 +6,7 @@
 - Added onscreen keyboard (onboard) to Cinnamon install
 - Added Bluetooth install (bluez, bluez-utils, bluez-deprecated-tools)
 - Added LightDM Settings Manager install script
+- Now you can choose to specify a /home partition
 
 ### Mar 2026
 - Now asks if you want to mount other partitions before generating fstab
