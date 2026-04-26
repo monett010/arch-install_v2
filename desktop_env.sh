@@ -74,7 +74,7 @@ function installDesktopEnv(){
 function installBluetooth(){
 	sudo pacman -S bluez bluez-utils bluez-deprecated-tools
 	sudo systemctl enable bluetooth
-	sudO systemctl start bluetooth 
+	sudo systemctl start bluetooth 
 }
 
 function installGTKThemes(){
