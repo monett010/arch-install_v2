@@ -30,6 +30,7 @@ case $greeter_ in
         ;;
     '3')
         installDisplayManager lightdm-slick
+        echo "Copying lightdm config file..."
         cp lightdm.conf /etc/lightdm/lightdm.conf
         ;;
     '4')
