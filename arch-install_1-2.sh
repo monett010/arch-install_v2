@@ -30,6 +30,7 @@ case $greeter_ in
         ;;
     '3')
         installDisplayManager lightdm-slick
+        cp lightdm.conf /etc/lightdm/lightdm.conf
         ;;
     '4')
         installDisplayManager gdm
