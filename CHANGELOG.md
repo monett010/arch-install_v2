@@ -1,6 +1,6 @@
 ## Arch Install Scripts Changelog
 - Created: 4/14/26
-- Last updated: 4/25/26
+- Last updated: 5/2/26
 
 ### Apr 2026
 - Added onscreen keyboard (onboard) to Cinnamon install
