@@ -1,13 +1,16 @@
 ## Arch Install Scripts Changelog
 - Created: 4/14/26
-- Last updated: 5/2/26
+- Last updated: 6/12/26
+
+### May 2026
+- Added Gnome Screenshot (gnome-screenshot) to Cinnamon install
+- Added script to install Arc GTK Theme, Mint Themes, and LightDM Display Manager at the same time
 
 ### Apr 2026
 - Added onscreen keyboard (onboard) to Cinnamon install
 - Added Bluetooth install (bluez, bluez-utils, bluez-deprecated-tools)
 - Added LightDM Settings Manager install script
 - Now you don't have edit etc/lightdm.lightdm.conf to use Slick Greeter
-- Now you can choose to specify a /home partition
 
 
 ### Mar 2026
