@@ -1,10 +1,11 @@
 ## Arch Install Scripts Changelog
 - Created: 4/14/26
-- Last updated: 6/12/26
+- Last updated: 5/31/26
 
 ### May 2026
 - Added Gnome Screenshot (gnome-screenshot) to Cinnamon install
 - Added script to install Arc GTK Theme, Mint Themes, and LightDM Display Manager at the same time
+- Added File Roller extension (nemo-fileroller) to Cinnamon install
 
 ### Apr 2026
 - Added onscreen keyboard (onboard) to Cinnamon install
